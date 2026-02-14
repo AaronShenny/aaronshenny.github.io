@@ -70,6 +70,8 @@ This repository now includes a GitHub Actions workflow that deploys the Vite bui
 
 The workflow builds the site with `npm ci && npm run build` and publishes the `dist/` directory.
 
+The Vite `base` path is auto-derived for GitHub Pages builds (root `/` for `username.github.io` repos, `/<repo>/` for project pages).
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
