@@ -13,17 +13,6 @@ const productionBasePath = isUserOrOrgPagesRepo
     ? `/${repoName}/`
     : "/";
 
-const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
-const owner = process.env.GITHUB_REPOSITORY_OWNER;
-const isUserOrOrgPagesRepo =
-  !!repoName && !!owner && repoName.toLowerCase() === `${owner.toLowerCase()}.github.io`;
-
-const productionBasePath = isUserOrOrgPagesRepo
-  ? "/"
-  : repoName
-    ? `/${repoName}/`
-    : "/";
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: mode === "development" ? "/" : productionBasePath,
