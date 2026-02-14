@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+// Base path for GitHub Pages deployment
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
