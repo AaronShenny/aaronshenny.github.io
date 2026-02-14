@@ -1,7 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
+
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const owner = process.env.GITHUB_REPOSITORY_OWNER;
+const isUserOrOrgPagesRepo =
+  !!repoName && !!owner && repoName.toLowerCase() === `${owner.toLowerCase()}.github.io`;
+
+const productionBasePath = isUserOrOrgPagesRepo
+  ? "/"
+  : repoName
+    ? `/${repoName}/`
+    : "/";
 
 const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
 const owner = process.env.GITHUB_REPOSITORY_OWNER;
@@ -24,7 +34,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
