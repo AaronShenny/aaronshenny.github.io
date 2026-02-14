@@ -18,7 +18,7 @@ const ContactSection = () => {
 
         <div className="flex flex-wrap gap-4 mb-10">
           <a
-            href="https://github.com/"
+            href="https://github.com/aaronshenny"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
@@ -27,7 +27,7 @@ const ContactSection = () => {
             <span className="text-primary">↗</span>
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/aaron-shenny/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
@@ -36,10 +36,17 @@ const ContactSection = () => {
             <span className="text-primary">↗</span>
           </a>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:aaronshenny102.go@gmail.com"
             className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
           >
-            <span>Email</span>
+            <span>aaronshenny102.go@gmail.com</span>
+            <span className="text-primary">↗</span>
+          </a>
+          <a
+            href="mailto:imca2501@rajagiri.edu"
+            className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
+          >
+            <span>imca2501@rajagiri.edu</span>
             <span className="text-primary">↗</span>
           </a>
         </div>
